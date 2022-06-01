@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>my Painting</title>
+</head>
+
+<body>
+  <div class="container bg-success">
+    <div class=" fs-3 d-flex justify-content-end">
+      <a class="mx-2" href="/addpainting/">Add Painting</a>
+      <a class="mx-2" href="/dashboard">Dashboard</a>
+      <a class="btn btn-danger mt- 2 mx-2" href="/logout">Logout</a>
+    </div>
+    <br>
+    <div>
+      <h1>{{painting.title}}</h1>
+
+      
+      <h4>Published by {{ painting.user.first_name }} {{ painting.user.last_name }}</h4>
+      <br>
+      <h4>Description:</h4>
+      <p>{{ painting.description }}</p>
+
+      <h4>Price:</h4>
+      ${{ painting.price }}
+      
+    </div>
+    <br>
+  </div>
+</body>
+
+</html>
